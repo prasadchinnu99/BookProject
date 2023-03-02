@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SharedLibrary.Models.CategoryModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+<<<<<<< Updated upstream
+    <a asp-action="Create"><button class="btn btn-primary">Create Category</button></a>
+</p>
+<table id="myTable" class="table table-bordered table-hover table-sm">
+=======
+    <a asp-action="Create"><button class="btn btn-primary">Create</button></a>
+</p>
+<table  id="myTable" class="table table-bordered table-hover table-sm">
+>>>>>>> Stashed changes
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            
+            <th data-orderable="false"> Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            
+            <td>
+<<<<<<< Updated upstream
+                    <a asp-action="Edit" asp-route-id="@item.CategoryId"><button class="btn btn-primary">Edit</button></a> |
+                    <a asp-action="Details" asp-route-id="@item.CategoryId"><button class="btn btn-warning">Details</button></a> |
+                    <a asp-action="Delete" asp-route-id="@item.CategoryId"><button class="btn btn-danger">Delete</button></a>
+=======
+                <a asp-action="Edit" asp-route-id="@item.CategoryId"> <button class="btn btn-primary">Edit</button></a> |
+                @*<a asp-action="Details" asp-route-id="@item.CategoryId"> <button class="btn btn-warning">Details</button></a> |*@
+                <a asp-action="Delete" asp-route-id="@item.CategoryId"> <button class="btn btn-danger">Delete</button></a> 
+>>>>>>> Stashed changes
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
